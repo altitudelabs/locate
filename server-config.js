@@ -31,16 +31,17 @@ module.exports = function (app) {
   if ('production' === env) {
     console.log('production');
     // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-    app.use(express.static(path.join(__dirname, 'public')));
-    app.set('appPath', __dirname + '/public');
+    app.use(express.static(path.join(__dirname, '.tmp')));
+    app.use(express.static(path.join(__dirname, 'dist')));
+    app.set('appPath', __dirname + 'app');
     app.use(morgan('dev'));
   }
 
   if ('development' === env || 'test' === env) {
     app.use(require('connect-livereload')());
-    app.use(express.static(path.join(__dirname, '.tmp')));
-    app.use(express.static(path.join(__dirname, 'client')));
-    app.set('appPath', 'client');
+    // app.use(express.static(path.join(__dirname, '.tmp')));
+    app.use(express.static(path.join(__dirname, 'app')));
+    app.set('appPath', 'app');
     app.use(morgan('dev'));
     app.use(errorHandler()); // Error handler - has to be last
   }
