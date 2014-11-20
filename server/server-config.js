@@ -17,8 +17,9 @@ var partials = require('express-partials');
 
 module.exports = function (app) {
   var env = app.get('env');
-  console.log('__dirname', __dirname);
-  app.set('views', __dirname + '/app/views');
+  var dirname = path.join(__dirname, '/../');
+  console.log('dirname', dirname);
+  app.set('views', dirname + '/app/views');
   // app.engine('html', require('ejs').renderFile);
   app.set('view engine', 'ejs');
   app.use(partials());
@@ -30,17 +31,17 @@ module.exports = function (app) {
 
   if ('production' === env) {
     console.log('production');
-    // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-    app.use(express.static(path.join(__dirname, '.tmp')));
-    app.use(express.static(path.join(__dirname, 'dist')));
+    // app.use(favicon(path.join(dirname, 'public', 'favicon.ico')));
+    app.use(express.static(path.join(dirname, '.tmp')));
+    app.use(express.static(path.join(dirname, 'dist')));
     app.set('appPath', 'app');
     app.use(morgan('dev'));
   }
 
   if ('development' === env || 'test' === env) {
     app.use(require('connect-livereload')());
-    // app.use(express.static(path.join(__dirname, '.tmp')));
-    app.use(express.static(path.join(__dirname, 'app')));
+    // app.use(express.static(path.join(dirname, '.tmp')));
+    app.use(express.static(path.join(dirname, 'app')));
     app.set('appPath', 'app');
     app.use(morgan('dev'));
     app.use(errorHandler()); // Error handler - has to be last

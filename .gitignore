@@ -6,3 +6,4 @@ dist
 app/bower_components
 up.sh
 locate.pem
+config.js
