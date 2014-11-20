@@ -33,7 +33,7 @@ module.exports = function (app) {
     // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
     app.use(express.static(path.join(__dirname, '.tmp')));
     app.use(express.static(path.join(__dirname, 'dist')));
-    app.set('appPath', __dirname + 'app');
+    app.set('appPath', 'app');
     app.use(morgan('dev'));
   }
 
