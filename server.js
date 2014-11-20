@@ -10,6 +10,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var express = require('express');
 var config = require('./server-config');
 var port = process.env.PORT || 4568;
+var mode = process.env.NODE_ENV || 'development';
 
 // Setup server
 var app = express();
@@ -24,7 +25,7 @@ app.get('/', function (req, res) {
 
 // Start server
 server.listen(port, config.ip, function () {
-  console.log('Express server listening on %d, in %s mode', port, app.get('env'));
+  console.log('Express server listening on %d, in %s mode', port, mode);
 });
 
 // Expose app
