@@ -162,8 +162,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           src: [
-            '<%= folders.dist %>/scripts/{,*/}*.js',
-            '<%= folders.dist %>/styles/{,*/}*.css',
+            // '<%= folders.dist %>/scripts/{,*/}*.js',
+            // '<%= folders.dist %>/styles/{,*/}*.css',
             // '<%= folders.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
             '<%= folders.dist %>/styles/fonts/*'
           ]
@@ -244,7 +244,8 @@ module.exports = function(grunt) {
             '*.{ico,txt}',
             '.htaccess',
             'images/{,*/}*.{webp,gif}',
-            'styles/fonts/*'
+            'styles/fonts/*',
+            'views/{,*/}*ejs'
           ]
         }]
       },
@@ -252,7 +253,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= folders.app %>',
-          dest: '<%= folders.tmp %>',
+          dest: '<%= folders.dist %>',
           src: [
             'scripts/{,*/}*js', 'bower_components/**/*js'
           ]

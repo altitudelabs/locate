@@ -21,11 +21,9 @@ header {
 }
 
 #index .background-image {
+  z-index: -1;
   background: no-repeat center center fixed; 
   background-image: url('../images/background-1.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   opacity: .3;
   position: fixed;
@@ -34,7 +32,6 @@ header {
   top: 0;
   -webkit-filter: blur(3px);
   -moz-filter: blur(3px);
-  -o-filter: blur(3px);
   -ms-filter: blur(3px);
   filter: blur(3px);
 }
@@ -104,8 +101,6 @@ header {
 }
 #circle {
     -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
@@ -115,8 +110,6 @@ header {
   border: 5px solid transparent;
     border-radius:50%;
   -webkit-animation: left 1s linear infinite;
-  -moz-animation: left 1s linear infinite;
-  -o-animation: left 1s linear infinite;
   animation: left 1s linear infinite;
 }
   
@@ -125,25 +118,12 @@ header {
       -webkit-animation-delay:.3s;
   }
 .two {-webkit-animation-delay:.2s;
-  -moz-animation-delay:.2s;
--o-animation-delay:.2s;
 animation-delay:.2s;}
 .three {-webkit-animation-delay:.1s;
-    -moz-animation-delay:.1s;
--o-animation-delay:.1s;
 animation-delay:.1s;}
 
 
 @-webkit-keyframes left{
-  0% { border-top: 4px solid rgba(0,0,0,0.1);}
-  100% {border-top: 4px solid #00b7f2;}
-}
-
-  @-moz-keyframes left{
-  0% { border-top: 4px solid rgba(0,0,0,0.1);}
-  100% {border-top: 4px solid #00b7f2;}
-}
-  @-o-keyframes left{
   0% { border-top: 4px solid rgba(0,0,0,0.1);}
   100% {border-top: 4px solid #00b7f2;}
 }
@@ -152,8 +132,8 @@ animation-delay:.1s;}
   100% {border-top: 4px solid #00b7f2;}
   
   @-webkit-keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
   }
 }
 
