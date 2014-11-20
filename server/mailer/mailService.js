@@ -12,7 +12,7 @@ module.exports = function (app) {
   console.log('running');
   app.post('/mail', function (req, res) {
     var mail = req.body.address;
-
+    console.log('mail ', mail);
     request.post({
       url: 'http://api.madmimi.com/audience_lists/test/add?email=' + mail,
       body: {
@@ -22,7 +22,8 @@ module.exports = function (app) {
       json: true
     }, function (err, httpResponse, body) {
         if(err) { console.log('err', err); }
-
+        console.log(body);
+        console.log(httpResponse.statusCode);
         if (httpResponse.statusCode === 200) {
           console.log('success');
           console.log(body);
