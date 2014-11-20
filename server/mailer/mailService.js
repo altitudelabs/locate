@@ -3,7 +3,7 @@
  */
 
 'use strict';
-var config = require('../config');
+// var config = require('../config');
 // var Madmimi = require('madmimi-node');
 // var mm = new Madmimi('info@locategroup.com', config.mm_key, true);
 var request = require('request');
@@ -17,7 +17,7 @@ module.exports = function (app) {
       url: 'http://api.madmimi.com/audience_lists/test/add?email=' + mail,
       body: {
         username: 'info@locategroup.com',
-        api_key: process.env.mm_key || config.mm_key,
+        api_key: process.env.mm_key,
       },
       json: true
     }, function (err, httpResponse, body) {
