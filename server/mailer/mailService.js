@@ -17,7 +17,7 @@ module.exports = function (app) {
       url: 'http://api.madmimi.com/audience_lists/test/add?email=' + mail,
       body: {
         username: 'info@locategroup.com',
-        api_key: process.env.mm_key,
+        api_key: process.env.MM_KEY,
       },
       json: true
     }, function (err, httpResponse, body) {
