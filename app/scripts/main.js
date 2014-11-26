@@ -1,6 +1,6 @@
 var counter = 1;
 $('.switch').click(function () {
-  if (counter === 3) {
+  if (counter === 5) {
     counter = 1;
   } else {
     counter++;
