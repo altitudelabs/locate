@@ -14,6 +14,8 @@ var cookieParser = require('cookie-parser');
 var errorHandler = require('errorhandler');
 var path = require('path');
 var partials = require('express-partials');
+// var flash = require('connect-flash');
+// var session = require('express-session');
 
 module.exports = function (app) {
   var env = app.get('env');
@@ -25,6 +27,14 @@ module.exports = function (app) {
   app.use(bodyParser.json());
   app.use(compression());
   app.use(methodOverride());
+  app.use(cookieParser('secret'));
+  // app.use(session({
+  //   secret: 'keyboard cat',
+  //   resave: false,
+  //   saveUninitialized: true,
+  //   cookie: { maxAge: 60000 }
+  // }));
+  // app.use(flash());
   app.use(cookieParser());
 
   if ('production' === env) {

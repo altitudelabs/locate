@@ -13,8 +13,8 @@ $('.switch').click(function () {
 
 $('.email-form form').submit(function(e) {
   e.preventDefault();
+  
   var address = $('.email-form form input').val();
-  console.log('email submitted: ', address);
   
   $.ajax({
     type: 'POST',
@@ -23,7 +23,14 @@ $('.email-form form').submit(function(e) {
       address: address
     },
     success: function(data){
+      alert('Thank you for subscribing =)');
       console.log('success, ', data);
+    },
+    error: function(err) {
+      console.log(err);
+      if (err.status === 409) {
+        alert('You have already subscribed !');
+      }
     }
   });
 });
