@@ -212,7 +212,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           '<%= folders.dist %>/styles/main.css': [
-            '<%= folders.tmp %>/styles/{,*/}*.css'
+            '<%= folders.app %>/styles/{,*/}*.css'
           ]
         }
       }
@@ -263,16 +263,16 @@ module.exports = function(grunt) {
           ]
         }]
       },
-      css: {
-        files: [{
-          expand: true,
-          cwd: '<%= folders.app %>',
-          dest: '<%= folders.tmp %>',
-          src: [
-            'styles/{,*/}*css'
-          ]
-        }]
-      },
+      // css: {
+      //   files: [{
+      //     expand: true,
+      //     cwd: '<%= folders.app %>',
+      //     dest: '<%= folders.tmp %>',
+      //     src: [
+      //       'styles/{,*/}*css'
+      //     ]
+      //   }]
+      // },
       assets: {
         files: [{
           expand: true,

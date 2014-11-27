@@ -168,7 +168,6 @@ body {
 }
 
 .email-section .input-group {
-  font-size: 18px;
   padding: 50px 0 35px 0;
   width: 100%;
 }
@@ -192,9 +191,6 @@ body {
   width: 180px;
   height: 40px;
   border: none;
-  /*border-top-right-radius: 2px;*/
-  /*border-bottom-right-radius: 2px;*/
-  /*border-left-style: none;*/
   color: white;
   background-color: #14a2db;
 }

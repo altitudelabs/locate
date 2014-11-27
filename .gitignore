@@ -4,6 +4,7 @@ dist
 .sass-cache
 .DS_Store
 app/bower_components
+public/bower_components
 up.sh
 locate.pem
 config.js

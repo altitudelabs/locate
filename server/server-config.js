@@ -43,12 +43,12 @@ module.exports = function (app) {
     app.use(express.static(path.join(dirname, 'dist')));
     app.use(express.static(path.join(dirname, 'public')));
     app.set('appPath', 'dist');
-    app.use(morgan('dev'));
+    // app.use(morgan('dev'));
   }
 
   if ('development' === env || 'test' === env) {
     app.set('views', dirname + '/app/views');
-    app.use(require('connect-livereload')());
+    // app.use(require('connect-livereload')());
     app.use(express.static(path.join(dirname, 'app')));
     app.use(express.static(path.join(dirname, 'public')));
     app.set('appPath', 'app');
