@@ -36,7 +36,6 @@ module.exports = function(grunt) {
           '<%= folders.tmp %>/*.html',
           '<%= folders.tmp %>/styles/{,*/}*.css',
           '{.tmp,<%= folders.app %>}/scripts/{,*/}*.js',
-          '<%= folders.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       },
       ejs: {
@@ -91,6 +90,12 @@ module.exports = function(grunt) {
         }]
       },
       server: '<%= folders.tmp %>'
+    },
+    uglify: {
+      build: {
+          src: ['<%= folders.app %>/scripts/*js'],
+          dest: '<%= folders.dist %>/scripts/main.js'
+      }
     },
     mocha: {
       all: {
@@ -243,7 +248,6 @@ module.exports = function(grunt) {
           src: [
             '*.{ico,txt}',
             '.htaccess',
-            'images/{,*/}*.{webp,gif}',
             'styles/fonts/*',
             'views/{,*/}*ejs'
           ]
@@ -255,7 +259,7 @@ module.exports = function(grunt) {
           cwd: '<%= folders.app %>',
           dest: '<%= folders.dist %>',
           src: [
-            'scripts/{,*/}*js', 'bower_components/**/*js'
+            'bower_components/**/*js'
           ]
         }]
       },

@@ -20,7 +20,6 @@ var partials = require('express-partials');
 module.exports = function (app) {
   var env = app.get('env');
   var dirname = path.join(__dirname, '/../');
-  console.log('dirname', dirname);
   app.set('view engine', 'ejs');
   app.use(partials());
   app.use(bodyParser.urlencoded({ extended: false }));
@@ -41,8 +40,8 @@ module.exports = function (app) {
     app.set('views', dirname + '/dist/views');
     console.log('production');
     // app.use(favicon(path.join(dirname, 'public', 'favicon.ico')));
-    // app.use(express.static(path.join(dirname, '.tmp')));
     app.use(express.static(path.join(dirname, 'dist')));
+    app.use(express.static(path.join(dirname, 'public')));
     app.set('appPath', 'dist');
     app.use(morgan('dev'));
   }
@@ -50,8 +49,8 @@ module.exports = function (app) {
   if ('development' === env || 'test' === env) {
     app.set('views', dirname + '/app/views');
     app.use(require('connect-livereload')());
-    // app.use(express.static(path.join(dirname, '.tmp')));
     app.use(express.static(path.join(dirname, 'app')));
+    app.use(express.static(path.join(dirname, 'public')));
     app.set('appPath', 'app');
     app.use(morgan('dev'));
     app.use(errorHandler()); // Error handler - has to be last
