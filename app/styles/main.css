@@ -80,9 +80,8 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  top: 0;
-  bottom: 0;
-  top: 0;
+  top: -80px;
+  bottom: -80px;
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
   -ms-filter: blur(2px);
