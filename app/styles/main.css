@@ -78,10 +78,13 @@ body {
   background-size: cover;
   /*opacity: .7;*/
   position: fixed;
-  left: 0;
-  right: 0;
-  top: -80px;
-  bottom: -80px;
+  top: 0;
+  /*left: 0;*/
+  /*right: 0;*/
+  /*top: -80px;*/
+  /*bottom: -80px;*/
+  min-width: 100%;
+
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
   -ms-filter: blur(2px);

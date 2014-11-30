@@ -1,36 +1,59 @@
-var counter = 1;
-$('.switch').click(function () {
-  if (counter === 5) {
-    counter = 1;
-  } else {
-    counter++;
-  }
-  console.log(counter);
-  var imageElement = $('#index .background-image');
-  var url = 'url(/images/background-'+counter+'.jpg)';
-  imageElement.css('background-image', url);
-});
 
-$('.email-form form').submit(function(e) {
-  e.preventDefault();
-  
-  var address = $('.email-form form input').val();
-  
-  $.ajax({
-    type: 'POST',
-    url: '/mail',
-    data: {
-      address: address
-    },
-    success: function(data){
-      alert('Thank you for subscribing =)');
-      console.log('success, ', data);
-    },
-    error: function(err) {
-      console.log(err);
-      if (err.status === 409) {
-        alert('You have already subscribed !');
-      }
+var initializer = {
+  backgroundImage: function () {
+    var bg = $('.background-image');
+    $(window).resize("resizeBackground");
+    function resizeBackground() {
+      bg.height($(window).height());
     }
-  });
-});
+    resizeBackground();
+  },
+
+  emailHandler: function () {
+    var counter = 1;
+
+    $('.switch').click(function () {
+      if (counter === 5) {
+        counter = 1;
+      } else {
+        counter++;
+      }
+      console.log(counter);
+      var imageElement = $('#index .background-image');
+      var url = 'url(/images/background-'+counter+'.jpg)';
+      imageElement.css('background-image', url);
+    });
+
+    $('.email-form form').submit(function(e) {
+      e.preventDefault();
+      
+      var address = $('.email-form form input').val();
+      
+      $.ajax({
+        type: 'POST',
+        url: '/mail',
+        data: {
+          address: address
+        },
+        success: function(data){
+          alert('Thank you for subscribing =)');
+          console.log('success, ', data);
+        },
+        error: function(err) {
+          console.log(err);
+          if (err.status === 409) {
+            alert('You have already subscribed !');
+          }
+        }
+      });
+    });
+  },
+
+  init: function () {
+    this.backgroundImage();
+    this.emailHandler();
+  }
+};
+
+initializer.init();
+
