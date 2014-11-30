@@ -182,8 +182,7 @@ body {
   padding-left: 10px;
   /*border-top-left-radius: 1px;*/
   /*border-bottom-left-radius: 1px;*/
-  border: none;
-
+  border: none !important;
 }
 
 .input-group button {
