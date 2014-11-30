@@ -4,7 +4,7 @@ var initializer = {
     var bg = $('.background-image');
     $(window).resize("resizeBackground");
     function resizeBackground() {
-      bg.height($(window).height());
+      bg.height($(window).height() + 80);
     }
     resizeBackground();
   },
