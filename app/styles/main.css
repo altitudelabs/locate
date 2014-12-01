@@ -72,16 +72,6 @@ body {
 
 .background-image {
   z-index: -1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-size: 100%;
-  background-image: url('../images/background-3.jpg');
-  background-attachment: fixed;
-  /*
-  z-index: -1;
   background: rgb(0,0,0,0.1);
   background: no-repeat center center fixed; 
   background-image: url('../images/background-3.jpg');
@@ -89,7 +79,7 @@ body {
   background-attachment: fixed;
   position: fixed;
   top: 0;
-  min-width: 100%*/;
+  min-width: 100%;
   /*opacity: .7;*/
   /*left: 0;*/
   /*right: 0;*/
