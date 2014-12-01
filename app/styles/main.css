@@ -80,11 +80,6 @@ body {
   position: fixed;
   top: 0;
   min-width: 100%;
-  /*opacity: .7;*/
-  /*left: 0;*/
-  /*right: 0;*/
-  /*top: -80px;*/
-  /*bottom: -80px;*/
 
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
@@ -188,6 +183,7 @@ body {
   /*border-top-left-radius: 1px;*/
   /*border-bottom-left-radius: 1px;*/
   border: none !important;
+  -webkit-appearance: none;
 }
 
 .input-group button {
