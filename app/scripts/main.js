@@ -10,7 +10,7 @@ var initializer = {
   },
 
   emailHandler: function () {
-    var counter = 1;
+    var counter = 3;
 
     $('.switch').click(function () {
       if (counter === 5) {
