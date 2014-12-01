@@ -18,7 +18,6 @@ var initializer = {
       } else {
         counter++;
       }
-      console.log(counter);
       var imageElement = $('#index .background-image');
       var url = 'url(/images/background-'+counter+'.jpg)';
       imageElement.css('background-image', url);
@@ -37,7 +36,6 @@ var initializer = {
         },
         success: function(data){
           alert('Thank you for subscribing =)');
-          console.log('success, ', data);
         },
         error: function(err) {
           console.log(err);
