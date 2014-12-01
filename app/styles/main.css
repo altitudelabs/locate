@@ -76,11 +76,12 @@ body {
   background: no-repeat center center fixed; 
   background-image: url('../images/background-3.jpg');
   background-size: cover;
-  background-attachment: fixed;
-  position: fixed;
-  top: 0;
-  min-width: 100%;
-
+  
+  /*background-attachment: fixed;*/
+  /*position: fixed;*/
+  /*top: 0;*/
+  /*min-width: 100%;*/
+  
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
   -ms-filter: blur(2px);
