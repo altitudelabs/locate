@@ -33,7 +33,7 @@
 
 * {
   font-family: 'kulturista-regular', Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   color: white;
@@ -44,7 +44,7 @@
 -------------------------------------------------------------- */
 
 header {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 /* =Body
@@ -57,8 +57,8 @@ body {
 
 
 .logo-img {
-  width: 50%;
-  max-width: 500px;
+  width: 40%;
+  max-width: 400px;
   min-width: 300px;
 }
 
@@ -98,21 +98,21 @@ body {
 }
 
 .message {
-  padding: 60px 30px 0 30px;
+  padding: 50px 30px 0 30px;
 }
 
 .first-message {
   font-family: 'kulturista-semi-bold', Helvetica, sans-serif;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .icons {
   padding-top: 50px;
   text-align: initial;
-  width: 90%;
+  width: 80%;
   min-width: 800px;
-  max-width: 1000px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -128,8 +128,15 @@ body {
 .icons .icon-4,
 .icons .icon-5 {
   vertical-align: top;
-  width: 19%;
+  width: 17%;
   text-align: center;
+}
+
+.icons .icon-1,
+.icons .icon-2,
+.icons .icon-3,
+.icons .icon-4 {
+  margin-right: 30px;
 }
 
 .icons .icon-text {
@@ -146,7 +153,8 @@ body {
 
 .icons .icon-description {
   font-family: 'avenir', Helvetica, sans-serif;
-  display: block;
+  display: none; /* temporary due to client's request */
+  /*display: block;*/
   font-size: 14px;
 }
 
@@ -159,7 +167,7 @@ body {
 }
 
 .email-section {
-  padding: 70px 20px 0 20px;
+  padding: 50px 20px 0 20px;
 }
 
 .email-section span {
@@ -181,8 +189,6 @@ body {
   width: 40%;
   max-width: 350px;
   padding-left: 10px;
-  /*border-top-left-radius: 1px;*/
-  /*border-bottom-left-radius: 1px;*/
   border: none;
   -webkit-border-radius: 0;
 }
@@ -210,68 +216,70 @@ body {
   opacity: 0.9;
   outline: none;
 }
-/*
-#circle {
-  position:absolute;
-  left:0;
-  right:0;
-  margin:50px auto;
-  width:150px;
-}
-
-#circle {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-
-.circle {
-  padding: 35px;
-  border: 5px solid transparent;
-    border-radius:50%;
-  -webkit-animation: left 1s linear infinite;
-  animation: left 1s linear infinite;
-}
-  
-.one {width:180px;
-      height:150px;
-      -webkit-animation-delay:.3s;
-  }
-.two {-webkit-animation-delay:.2s;
-animation-delay:.2s;}
-.three {-webkit-animation-delay:.1s;
-animation-delay:.1s;}
-
-
-@-webkit-keyframes left{
-  0% { border-top: 4px solid rgba(0,0,0,0.1);}
-  100% {border-top: 4px solid #00b7f2;}
-}
-  @keyframes left{
-  0% { border-top: 4px solid rgba(0,0,0,0.1);}
-  100% {border-top: 4px solid #00b7f2;}
-  
-  @-webkit-keyframes spin {
-    from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
-  }
-}
-*/
 
 /* =Footer
 -------------------------------------------------------------- */
 
 footer {
-  padding-bottom: 60px;
+  padding-bottom: 40px;
+}
+
+
+
+@media only screen and (max-width: 1400px) {
+  
+  .message {
+    padding: 40px 30px 0 30px;
+  }
+
+  .first-message {
+    font-size: 20px;
+  }
+
+  .icons {
+    padding-top: 30px;
+  }
+
+  .icons .icon-1,
+  .icons .icon-2,
+  .icons .icon-3,
+  .icons .icon-4,
+  .icons .icon-5 {
+    vertical-align: top;
+    width: 19%;
+    text-align: center;
+  }
+
+  .icons .icon-1,
+  .icons .icon-2,
+  .icons .icon-3,
+  .icons .icon-4 {
+    margin-right: 0;
+  }
+
+  .email-section {
+    padding: 30px 20px 0 20px;
+  }
+  .email-section .input-group {
+    padding: 30px 0 35px 0;
+  }
+
 }
 
 /* =Tablet
 ------------------------------------------------------------ */
 @media only screen and (max-width: 800px) {
   
+  .message {
+    padding: 50px 30px 0 30px;
+  }
+
+  .first-message {
+    font-size: 22px;
+  }
+
   .icons {
     padding-top: 60px;
-    /*text-align: initial;*/
     width: 90%;
     min-width: 0px;
   }
@@ -292,6 +300,13 @@ footer {
   .icons .icon-3,
   .icons .icon-4 {
     padding-bottom: 40px;
+  }
+  
+  .email-section {
+    padding: 50px 20px 0 20px;
+  }
+  .email-section .input-group {
+    padding: 50px 0 35px 0;
   }
 
 
