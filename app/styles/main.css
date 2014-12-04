@@ -150,7 +150,7 @@ body {
 .icons .icon-2,
 .icons .icon-3,
 .icons .icon-4 {
-  margin-right: 30px;
+  margin-right: 25px;
 }
 
 .icons .icon-text {
@@ -260,7 +260,7 @@ footer {
   .icons .icon-4,
   .icons .icon-5 {
     vertical-align: top;
-    width: 19%;
+    width: 18%;
     text-align: center;
   }
 
