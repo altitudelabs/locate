@@ -9,7 +9,7 @@ var initializer = {
     resizeBackground();
   },
 
-  emailHandler: function () {
+  switchButton: function () {
     var counter = 3;
 
     $('.switch').click(function () {
@@ -22,6 +22,30 @@ var initializer = {
       var url = 'url(/images/background-'+counter+'.jpg)';
       imageElement.css('background-image', url);
     });
+  },
+
+  up: function () {
+    $('.up').click(function () {
+      var imageElement = $('.logo-img');
+      var old = imageElement.width();
+      imageElement.width(old + 50);
+      $('.size').text(old + 50);
+    });
+  },
+  down: function () {
+    $('.down').click(function () {
+      var imageElement = $('.logo-img');
+      var old = imageElement.width();
+      imageElement.width(old - 50);
+      $('.size').text(old - 50);
+    });
+  },
+  size: function () {
+      $('.size').text($('.logo-img').width());
+  },
+
+  emailHandler: function () {
+
 
     $('.email-form form').submit(function(e) {
       e.preventDefault();
@@ -50,6 +74,10 @@ var initializer = {
   init: function () {
     this.backgroundImage();
     this.emailHandler();
+    this.switchButton();
+    this.up();
+    this.down();
+    this.size();
   }
 };
 

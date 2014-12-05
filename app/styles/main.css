@@ -57,9 +57,9 @@ body {
 
 
 .logo-img {
-  width: 40%;
-  max-width: 400px;
-  min-width: 300px;
+  width: 400px;
+  /*max-width: 400px;*/
+  /*min-width: 300px;*/
 }
 
 .logo {
@@ -102,13 +102,29 @@ body {
   height: auto;
 }
 
-.switch {
+.switch,
+.up,
+.down,
+.size {
   position: absolute;
-  right: 10px;
   top: 10px;
   border: 1px solid black;
   padding: 2px;
   cursor: pointer;
+}
+.switch {
+  right: 10px;
+}
+.up {
+  right: 120px;
+}
+.down {
+  right: 70px;
+}
+.size {
+  right: 120px;
+  top: 40px;
+
 }
 
 .message {
