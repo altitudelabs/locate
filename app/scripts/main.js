@@ -9,18 +9,14 @@ var initializer = {
     resizeBackground();
   },
 
-  switchButton: function () {
-    var counter = 3;
-
-    $('.switch').click(function () {
-      if (counter === 5) {
-        counter = 1;
+  iconToggle: function () {
+    $('.icons-toggle').click(function () {
+      console.log($('.icons').css('display'));
+      if ($('.icons').css('display') !== 'none' ){
+        $('.icons').hide();
       } else {
-        counter++;
+        $('.icons').show();
       }
-      var imageElement = $('#index .background-image');
-      var url = 'url(/images/background-'+counter+'.jpg)';
-      imageElement.css('background-image', url);
     });
   },
 
@@ -74,10 +70,11 @@ var initializer = {
   init: function () {
     this.backgroundImage();
     this.emailHandler();
-    this.switchButton();
+    // this.switchButton();
     this.up();
     this.down();
     this.size();
+    this.iconToggle();
   }
 };
 

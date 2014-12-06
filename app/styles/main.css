@@ -74,7 +74,7 @@ body {
   z-index: -1;
   background: rgb(0,0,0,0.1);
   background: no-repeat center center fixed; 
-  background-image: url('../images/background-3.jpg');
+  background-image: url('../images/background.jpg');
   background-size: cover;
   
   /*background-attachment: fixed;*/
@@ -102,18 +102,15 @@ body {
   height: auto;
 }
 
-.switch,
 .up,
 .down,
-.size {
+.size,
+.icons-toggle {
   position: absolute;
   top: 10px;
   border: 1px solid black;
   padding: 2px;
   cursor: pointer;
-}
-.switch {
-  right: 10px;
 }
 .up {
   right: 120px;
@@ -124,7 +121,9 @@ body {
 .size {
   right: 120px;
   top: 40px;
-
+}
+.icons-toggle {
+  right: 160px;
 }
 
 .message {
