@@ -57,9 +57,10 @@ body {
 
 
 .logo-img {
-  width: 400px;
-  /*max-width: 400px;*/
-  /*min-width: 300px;*/
+  /*width: 400px;*/
+  width: 66%;
+  max-width: 700px;
+  min-width: 300px;
 }
 
 .logo {
@@ -127,7 +128,7 @@ body {
 }
 
 .message {
-  padding: 50px 30px 0 30px;
+  padding: 120px 30px 0 30px;
 }
 
 .first-message {
@@ -196,17 +197,17 @@ body {
 }
 
 .email-section {
-  padding: 50px 20px 0 20px;
+  padding: 60px 20px 0 20px;
 }
 
 .email-section span {
-  font-family: 'kulturista-semi-bold', Helvetica, sans-serif;
+  font-family: 'kulturista-regular', Helvetica, sans-serif;
   font-size: 18px;
 
 }
 
 .email-section .input-group {
-  padding: 50px 0 35px 0;
+  padding: 30px 0 30px 0;
   width: 100%;
 }
 
@@ -223,7 +224,7 @@ body {
 }
 
 .input-group button {
-  font-family: 'kulturista-semi-bold', Helvetica, sans-serif;
+  font-family: 'kulturista-regular', Helvetica, sans-serif;
   width: 180px;
   height: 40px;
   border: none;
@@ -254,57 +255,20 @@ footer {
 }
 
 
-
-@media only screen and (max-width: 1400px) {
-  
-  .message {
-    padding: 40px 30px 0 30px;
-  }
-
-  .first-message {
-    font-size: 20px;
-  }
-
-  .icons {
-    padding-top: 30px;
-  }
-
-  .icons .icon-1,
-  .icons .icon-2,
-  .icons .icon-3,
-  .icons .icon-4,
-  .icons .icon-5 {
-    vertical-align: top;
-    width: 19%;
-    text-align: center;
-  }
-
-  .icons .icon-1,
-  .icons .icon-2,
-  .icons .icon-3,
-  .icons .icon-4 {
-    margin-right: 0;
-  }
-
-  .email-section {
-    padding: 30px 20px 0 20px;
-  }
-  .email-section .input-group {
-    padding: 30px 0 35px 0;
-  }
-
-}
-
 /* =Tablet
 ------------------------------------------------------------ */
 @media only screen and (max-width: 800px) {
-  
+    
+  .logo-img {
+    width: 90%;
+  }
+
   .message {
-    padding: 50px 30px 0 30px;
+    padding: 70px 30px 0 30px;
   }
 
   .first-message {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .icons {
@@ -332,10 +296,10 @@ footer {
   }
   
   .email-section {
-    padding: 50px 20px 0 20px;
+    padding: 40px 40px 0 40px;
   }
   .email-section .input-group {
-    padding: 50px 0 35px 0;
+    padding: 40px 0 35px 0;
   }
 
 
@@ -346,11 +310,25 @@ footer {
 ------------------------------------------------------------ */
 @media only screen and (max-width: 400px) {
   
+  .message {
+    padding: 50px 30px 0 30px;
+  }
+
+  .first-message {
+    font-size: 17px;
+  }
+
+
+  .email-section {
+    font-size: 12px;
+  }
+
   .email-section .input-group {
-    width: 75%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
+
 
   .input-group input {
     width: 100%;
