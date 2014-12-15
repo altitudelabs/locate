@@ -245,6 +245,13 @@ body {
   border: none !important;
   margin: 0 10px 0 10px;
 }
+
+.icons-social .inactive {
+  background-color: grey !important;
+  pointer-events: none;
+  cursor: default;
+}
+
 .icons-social a i {
   top: 1px !important; /* canceling out positioning due to removing border */
   color: #fff;
