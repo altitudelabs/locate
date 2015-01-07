@@ -75,7 +75,7 @@ body {
   z-index: -1;
   background: rgb(0,0,0,0.4);
   background: no-repeat center center fixed; 
-  background-image: url('../images/background-2.png');
+  background-image: url('../images/background.jpg');
   background-size: cover;
   
   /*background-attachment: fixed;*/
