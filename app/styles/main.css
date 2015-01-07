@@ -210,7 +210,6 @@ body {
   width: 100%;
 }
 
-
 .input-group input {
   color: #565a5c;
   outline: none;
@@ -234,6 +233,22 @@ body {
 .input-group button:active {
   opacity: 0.9;
   outline: none;
+}
+.alert-message {
+  width: 100%;
+  position: fixed;
+  top: 10%;
+}
+.alert-message .alert-success,
+.alert-message .alert-info,
+.alert-message .alert-danger {
+  border: solid 1px;
+  border-radius: 0px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: middle;
+  display: none;
 }
 
 .icons-social {
@@ -357,6 +372,12 @@ footer {
 
   .input-group button {
     width: 100%;
+  }
+
+  .alert-message .alert-success,
+  .alert-message .alert-info,
+  .alert-message .alert-danger {
+    width: 90%;
   }
 
 

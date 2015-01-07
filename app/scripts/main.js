@@ -42,12 +42,17 @@ var initializer = {
 
   emailHandler: function () {
 
-
+    var handleMessage = function (type) {
+      var selector = '.alert-message .alert-' + type;
+      $(selector).css('display', 'block');
+      setTimeout(function () {
+        $(selector).css('display', 'none');
+      }, 7000);
+    };
     $('.email-form form').submit(function(e) {
       e.preventDefault();
       
       var address = $('.email-form form input').val();
-      
       $.ajax({
         type: 'POST',
         url: '/mail',
@@ -55,12 +60,13 @@ var initializer = {
           address: address
         },
         success: function(data){
-          alert('Thank you for subscribing =)');
+          handleMessage('success');
         },
         error: function(err) {
-          console.log(err);
           if (err.status === 409) {
-            alert('You have already subscribed !');
+            handleMessage('info');
+          } else {
+            handleMessage('error');
           }
         }
       });
