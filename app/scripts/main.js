@@ -47,11 +47,10 @@ var initializer = {
       $(selector).css('display', 'block');
       setTimeout(function () {
         $(selector).css('display', 'none');
-      }, 7000);
+      }, 10000);
     };
     $('.email-form form').submit(function(e) {
       e.preventDefault();
-      
       var address = $('.email-form form input').val();
       $.ajax({
         type: 'POST',
