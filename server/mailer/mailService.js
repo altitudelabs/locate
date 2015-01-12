@@ -38,7 +38,7 @@ module.exports = function (app) {
                 form: {
                   username: 'info@locategroup.com',
                   api_key: process.env.MM_KEY,
-                  promotion_name: 'email template 1',
+                  promotion_name: 'mobile friendly',
                   recipient: mail,
                   subject: 'Welcome to Locate!',
                   from: 'Locate Group <no-reply@locategroup.com>'
